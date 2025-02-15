@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/edeee44a-d13e-4b97-b7fa-3b820a1f5c80)# 🚀 Face Recognition System
+# 🚀 Face Recognition System
 
 A powerful and efficient **Face Recognition System** built using OpenCV, imgbeddings, and PostgreSQL. This project enables real-time face detection, registration, and recognition with database storage for embeddings.
 
