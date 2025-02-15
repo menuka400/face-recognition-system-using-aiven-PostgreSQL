@@ -15,6 +15,15 @@ A powerful and efficient **Face Recognition System** built using OpenCV, imgbedd
 3. Store the embedding in a PostgreSQL database.
 4. Match faces against the stored database for recognition.
 
+## 📸 what is the logic behind this
+1. Vector representation, embeddings and search.
+Information can be stored in several ways, just think about the sentence
+
+```bash
+I Love Parks:
+```
+you could represent it in a table with three columns to flag the presence or not of each word (I, LOVE and PARKS) as per image below:
+
 ## 🛠 Setup & Installation
 
 ### 1️⃣ Clone the Repository
