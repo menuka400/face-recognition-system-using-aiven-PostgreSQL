@@ -35,7 +35,7 @@ Follow these steps to set up PostgreSQL:
 #### 🏗 Step 1: Create a PostgreSQL Service on Aiven
 1. **Create an account** on [Aiven.io](https://aiven.io).
 2. **Create a new project** in Aiven.
-3. **Create a PostgreSQL service** (you can select the free plan or any other option) and skip all other configurations.
+3. **Create a PostgreSQL service** (you can select the free plan) and skip all other configurations.
 4. **Wait for the server** to transition from *Rebuilding* to *Running*.
 
 #### 🔧 Step 2: Install PostgreSQL Locally
