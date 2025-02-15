@@ -16,7 +16,7 @@ A powerful and efficient **Face Recognition System** built using OpenCV, imgbedd
 4. Match faces against the stored database for recognition.
 
 ## 🔍 what is the Logic behind this?
-1. Vector representation, embeddings and search.
+**1. Vector representation, embeddings and search.**
 
 Information can be stored in several ways, just think about the sentence `I Love Parks`:
 you could represent it in a table with three columns to flag the presence or not of each word (`I`, `LOVE` and `PARKS`) as per image below:
@@ -30,7 +30,7 @@ encoding. The drawback though is that the number of columns grows with the numbe
 
 ![image](https://github.com/user-attachments/assets/83884019-2e78-4aa9-baab-475cffc9f8f1)
 
-2. Embeddings
+**2. Embeddings**
 
 What are embeddings then? As mentioned above, storing the presence of each word in a 
 separate column would create a very wide and unmanageable dataset. Therefore a standard 
@@ -53,7 +53,7 @@ In the graph above, the `distance` represents a calculation of similarity betwee
 The more two vectors point to the same direction or are close to each other, the more the 
 information they represent should be similar.
 
-3. Does this work with pictures?
+**3. Does this work with pictures?**
 
 A similar approach also works for pictures. As beautifully explained by [Mathias Grønne](https://towardsdatascience.com/introduction-to-image-embedding-and-accuracy-53473e8965f/) and 
 visualized in the image below (it's Figure 1.1 from the above blog, original book photo photo by 
@@ -62,7 +62,7 @@ could reduce the matrix information and create embeddings on it.
 
 ![image](https://github.com/user-attachments/assets/be353354-439e-42ff-929f-157d8bf782af)
 
-4. Setup Face recognition with Python and PostgreSQL `pgvector`
+**4. Setup Face recognition with Python and PostgreSQL `pgvector`**
 
 If you, like me, use IPhotos on Mac, you’ll be familiar with the “People” tab, where you can 
 select one person and find the photos where this person is included. I used the following 
@@ -91,7 +91,7 @@ In the graph above, the `distance` represents a calculation of similarity betwee
 The more two vectors point to the same direction or are close to each other, the more the 
 information they represent should be similar.
 
-5. Retrieve the faces from photos
+**5. Retrieve the faces from photos**
 
 An ideal dataset to calculate embeddings would contain only pictures of one person at a time, 
 looking straight in the camera with minimal background. As we know, this is not the truth for 
@@ -171,7 +171,7 @@ The result of the face detection stage is not perfect: it identifies three faces
 that are visible, but is good enough for our purpose. You can fine tune the algorithm 
 parameters to find the better fit for your use cases.
 
-6. Calculate the embeddings
+**6. Calculate the embeddings**
 
 Once we identified the faces, we can now calculate the embeddings. For this step we are 
 going to use [imgbeddings](https://github.com/minimaxir/imgbeddings), a Python package to generate embedding vectors from images, 
@@ -201,7 +201,7 @@ embedding = ibed.to_embeddings(img)[0]
 The code above calculates the embeddings. The result is a 768 element numpy vector for 
 each input image, representing its embedding.
 
-7. Store embeddings in PostgreSQL using `pgvector`
+**7. Store embeddings in PostgreSQL using `pgvector`**
 
 It's time to start using the capability of PostgreSQL and the `pgvector` extension. First of all 
 we need a PostgreSQL up and running, we can navigate to the [Aiven Console](https://console.aiven.io/), create a new 
@@ -254,7 +254,7 @@ conn.close()
 
 Where `file_name` and `embedding` are the variables from the previous Python statement.
 
-8. Get Slack image, retrieve face and calculate embeddings
+**8. Get Slack image, retrieve face and calculate embeddings**
 
 The following steps in the process are similar to the ones already done above, this time the 
 source image is the Slack profile picture where we'll detect the face and calculate the 
@@ -285,7 +285,7 @@ for x, y, w, h in faces:
     slack_img_embedding = ibed.to_embeddings(cropped_image)[0]
 ```
 
-9. Find similar images with vector search
+**9. Find similar images with vector search**
 
 The final piece of the puzzle is to use the similarity functions available in pgvector to find 
 pictures where the person is included. pgvector provides [different similarity functions](https://aiven.io/docs/products/postgresql/concepts/pgvector#vector-similarity), 
@@ -311,7 +311,7 @@ The results, in the crabweek case was five photos where my colleague Tibs was in
 
 ![image](https://github.com/user-attachments/assets/e872b032-c6bc-4a10-a515-f7ae478c5517)
 
-10. pgvector, enabling Machine Learning in PostgreSQL
+**10. pgvector, enabling Machine Learning in PostgreSQL**
 
 Machine Learning is becoming pervasive in our day to day activities. Being able to store, 
 query and analyse data embeddings in the same technology where the data resides, like a 
