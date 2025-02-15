@@ -285,18 +285,6 @@ for x, y, w, h in faces:
     slack_img_embedding = ibed.to_embeddings(cropped_image)[0]
 ```
 
-
-## 🛠 Setup & Installation
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/your-username/face-recognition-system.git
-cd face-recognition-system
-```
-Since Slack pictures could be complex, the above code has a `for` loop iterating over all the 
-detected faces. You might want to add additional checks to find the most relevant face to 
-calculate the embeddings from.
-
 9. Find similar images with vector search
 
 The final piece of the puzzle is to use the similarity functions available in pgvector to find 
@@ -337,6 +325,16 @@ pgvector [use cases and features description](https://aiven.io/docs/products/pos
 [How to enable pgvector in Aiven for PostgreSQL](https://aiven.io/docs/products/postgresql/howto/use-pgvector)
 pgvector [README on GitHub](https://github.com/pgvector/pgvector)
 
+## 🛠 Setup & Installation
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/face-recognition-system.git
+cd face-recognition-system
+```
+Since Slack pictures could be complex, the above code has a `for` loop iterating over all the 
+detected faces. You might want to add additional checks to find the most relevant face to 
+calculate the embeddings from.
 
 ### 2️⃣ Install Dependencies
 Ensure you have Python installed, then run:
