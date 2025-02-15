@@ -1,0 +1,6 @@
+opencv-python
+numpy
+Pillow
+imgbeddings
+psycopg2
+tabulate
