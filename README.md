@@ -58,7 +58,8 @@ CREATE TABLE pictures (picture text PRIMARY KEY,embedding vector(768));
 ```
 5. **Update the `<SERVICE_URI>`** in your `face_recognition.py` code with your Aiven service URI.
    
-![image](https://github.com/user-attachments/assets/44506831-5312-4ba5-990c-e6bf60299346)
+![Uploading image.png…]()
+
 
 
 ### 4️⃣ Run the Application
