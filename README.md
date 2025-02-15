@@ -1,4 +1,4 @@
-# 🚀 Face Recognition System
+![image](https://github.com/user-attachments/assets/edeee44a-d13e-4b97-b7fa-3b820a1f5c80)# 🚀 Face Recognition System
 
 A powerful and efficient **Face Recognition System** built using OpenCV, imgbeddings, and PostgreSQL. This project enables real-time face detection, registration, and recognition with database storage for embeddings.
 
@@ -57,6 +57,8 @@ CREATE EXTENSION vector;
 CREATE TABLE pictures (picture text PRIMARY KEY,embedding vector(768));
 ```
 5. **Update the `<SERVICE_URI>`** in your `face_recognition.py` code with your Aiven service URI.
+![image](https://github.com/user-attachments/assets/44506831-5312-4ba5-990c-e6bf60299346)
+
 
 ### 4️⃣ Run the Application
 ```bash
