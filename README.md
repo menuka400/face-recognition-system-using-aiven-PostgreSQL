@@ -54,7 +54,7 @@ After connecting to PostgreSQL, run the following commands your terminal:
 ```sql
 CREATE EXTENSION vector;
 
-CREATE TABLE pictures (picture TEXT PRIMARY KEY,embedding VECTOR(768));
+CREATE TABLE pictures (picture text PRIMARY KEY,embedding vector(768));
 ```
 5. **Update the `<SERVICE_URI>`** in your `face_recognition.py` code with your Aiven service URI.
 
