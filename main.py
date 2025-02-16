@@ -7,7 +7,7 @@ import os
 from tabulate import tabulate
 
 def connect_db():
-    return psycopg2.connect("postgres://avnadmin:AVNS_F9QTOJet-vzalfnV2-T@pg-9c3cfe6-menuka-1.h.aivencloud.com:21721/defaultdb?sslmode=require")
+    return psycopg2.connect("PostgreSQL_Link")
 
 def initialize_database():
     """Create the required table if it doesn't exist"""
